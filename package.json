@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist",
-    "build-html": "mkdir -p dist && ejs-cli src/ejs/index.ejs -O \"{\\\"apiRoot\\\": \\\"https://api.themoviedb.org/3\\\", \\\"apiKey\\\": \\\"b73fae398ce575cc31df96cc296bda80\\\"}\" > dist/index.html",
+    "build-html": "mkdir -p dist && ejs-cli src/ejs/index.ejs -O \"{\\\"apiRoot\\\": \\\"https://api.themoviedb.org/3\\\", \\\"apiKey\\\": \\\"${MOVIEDB_API_KEY}\\\"}\" > dist/index.html",
     "build-css": "mkdir -p dist/css && lessc --clean-css --strict-imports --include-path=node_modules/bootstrap/less:node_modules/font-awesome/less --source-map=dist/css/index.css.map --source-map-less-inline src/less/index.less dist/css/index.css",
     "build-js": "mkdir -p dist/js && browserify --debug src/js/index.js -t [ babelify --presets [ es2015 react ] ] -t [ uglifyify ] | exorcist dist/js/index.js.map > dist/js/index.js",
     "build-assets": "mkdir -p dist && cp -r resources/* dist/ && mkdir -p dist/fonts && cp node_modules/font-awesome/fonts/* dist/fonts/ && cp node_modules/bootstrap/fonts/* dist/fonts/",
