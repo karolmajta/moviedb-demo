@@ -11,6 +11,8 @@
 Before you run the application you need to set an environment variable `MOVIEDB_API_KEY`:
 
     $ export MOVIEDB_API_KEY=<your MovieDB API key>
+    $ export API_ROOT="https://api.themoviedb.org/3"
+    $ export IMAGE_ROOT="http://image.tmdb.org/t/p/w370"
 
 Then you can call `npm start` which will build and test the project, eventually running a development static file
 server:
