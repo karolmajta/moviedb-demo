@@ -44,3 +44,7 @@ any static file server, uploaded to S3, rsynced to remote server etc.
 
 `npm run server` bootstraps a simple static server that just serves contents of `dist`. It's handy to have it running in
 development in one terminal window, while in other you switch between `npm run build` and `npm test`.
+
+## Hosted demo
+
+You can see this application at https://karolmajta.github.io/moviedb-demo/
