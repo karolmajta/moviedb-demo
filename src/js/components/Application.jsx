@@ -88,10 +88,6 @@ export default class Application extends ReactiveComponent {
         this.props.store.dispatch(actions.fetchNextSearchPage(page));
     };
 
-    onItemSelect = (item) => {
-        console.log(item.toJS());
-    };
-
     onDismissError = () => {
         this.props.store.dispatch(actions.dismissError());
     }
